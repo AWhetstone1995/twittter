@@ -2,7 +2,12 @@
   <nav class="panel">
     <p class="panel-heading">Who to Follow</p>
   <div class="panel-block">
-    <article class="media">
+    <p class="control">
+    <% User.all.each do |user| %>
+        <%= user.name %><br/><br/>
+    <% end %>
+    </p>
+    <%# <article class="media">
       <div class="media-left">
         <figure class="image is-32x32">
           <img src="https://bulma.io/images/placeholders/64x64.png">
@@ -50,7 +55,7 @@
           </p>
         </div>
       </div>
-    </article>
+    </article> %>
   </div>
   </nav>
 </div>
